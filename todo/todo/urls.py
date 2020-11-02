@@ -19,5 +19,8 @@ from todo.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('tasks.urls')),  # new
+    path('', include('tasks.urls')),
+    path('api/', include('tasks.urls')),
+    path('api-auth/', include('rest_framework.urls'))
+
 ]
